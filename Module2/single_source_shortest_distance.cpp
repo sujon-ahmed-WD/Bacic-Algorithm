@@ -23,7 +23,7 @@ void bfs(int src)
             {
                 q.push(child);
                 vis[child] = true;
-                level[child] = level[par] + 1;
+                level[child] = level[par] + 1;//
                 prant[child]=par; //  
             }
         }
