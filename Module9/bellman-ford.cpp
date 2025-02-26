@@ -29,6 +29,28 @@ void belman_ford()
                 dis[b] = dis[a] + c;
         }
     }
+    bool cycle = false;
+    for (auto ed : edj_list)
+    {
+        int a = ed.a;
+        int b = ed.b;
+        int c = ed.c;
+        if (dis[a] != INT_MAX && dis[a] + c < dis[b])
+        {
+            cycle = true;
+            break;
+        }
+    }
+    if (cycle)
+        cout << "Negitive cycle detact";
+    else
+    {
+
+        for (int i = 0; i < n; i++)
+        {
+            cout << i << " -> " << dis[i] << endl;
+        }
+    }
 }
 
 int main()
@@ -45,10 +67,6 @@ int main()
         dis[i] = INT_MAX;
     dis[0] = 0;
     belman_ford();
-    for (int i = 0; i < n; i++)
-    {
-        cout << i << " -> " << dis[i] << endl;
-    }
 
     return 0;
 }
