@@ -4,10 +4,11 @@ int par[1005];
 
 int find(int node)
 {
-    cout<<node<<endl;
+    // cout<<node<<endl;
     if(par[node]==-1)
         return node;
     int leader=find(par[node]);    
+    par[node]=leader;
     return leader;
 }
 int main()
@@ -21,5 +22,10 @@ int main()
     par[4] = 5;
     par[5] = 3;
     cout << find(4) << endl;
+
+    for(int i=0; i<6; i++)
+    {
+        cout<< i<<" -> "<<par[i]<<endl;
+    }
     return 0;
 }
