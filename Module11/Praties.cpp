@@ -17,21 +17,6 @@ int find(int node)
    return node;
 }
 
-// void dsu_union(int node1, int node2)
-// {
-//    int leader1 = find(node1);
-//    int leader2 = find(node2);
-//    if (group_size[leader1] >= group_size[leader2])
-//    {
-//       par[leader2] = leader1;
-//       group_size[leader1] += group_size[leader2];
-//    }
-//    else
-//    {
-//       par[leader1] = leader2;
-//       group_size[leader1] += group_size[leader2];
-//    }
-// }
 void dsu_union(int node1,int node2)
 {
    int leader1=find(node1);
