@@ -43,7 +43,7 @@ int main()
         int a, b;
         cin >> a >> b;
         int leaderA=find(a);
-        int leaderB=find(b);
+        int leaderB=find(b);`
         if(leaderA==leaderB)
             cycle=true;
         else
