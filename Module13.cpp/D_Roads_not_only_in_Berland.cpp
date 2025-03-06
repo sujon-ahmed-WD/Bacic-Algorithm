@@ -42,7 +42,7 @@ int main()
         int leaderA=find(a);
         int leaderB=find(b);
         if(leaderA==leaderB)
-        // cycle detact
+        // cycle detact // this is detact korvo cycle;
             rmv.push_back({a,b});
         else
         dsu_union(a,b);    
