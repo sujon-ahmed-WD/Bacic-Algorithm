@@ -51,24 +51,22 @@ int main()
         cin >> src >> des;
         bfs(src);
 
-        if(level[des]==-1)
+        if (level[des] == -1)
         {
-            cout<<"-1"<<endl;
+            cout << "-1" << endl;
         }
-        else{
-            vector<int>path;
+        else
+        {
+            vector<int> path;
             int node = des;
             while (node != -1)
             {
                 path.push_back(node);
-                node=parent[node];
+                node = parent[node];
             }
-             
-            cout<<path.size()-1<<endl;
 
-      
+            cout << path.size() - 1 << endl;
         }
-
     }
 
     return 0;
