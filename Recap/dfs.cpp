@@ -21,18 +21,15 @@ int cnt;
 void dfs(int node)
 {
     cnt++;
-    vis[node]=true;
+    vis[node] = true;
 
-    for(auto child : adj_list[node])
-    if(!vis[child])
-    {
-        dfs(child);
-        vis[child]=true;
-    }
-
+    for (auto child : adj_list[node])
+        if (!vis[child])
+        {
+            dfs(child);
+            vis[child] = true;
+        }
 }
-
-
 
 int main()
 {
