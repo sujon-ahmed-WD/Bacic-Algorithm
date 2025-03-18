@@ -1,16 +1,28 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    char c;cin>>c;
-    if(c=='z')
+    long long n;
+    cin >> n;
+    long long a[n];
+    for (int i = 0; i < n; i++)
     {
-        cout<<'a';
-        exit(0);
+        cin >> a[i];
     }
-    char s=c+1;
-    cout<<s;
+    int min = a[0];
+    int min_index = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (min > a[i])
+        {
+            min = a[i];
+            min_index = i;
+        }
+    }
+    cout << min << " " << min_index+1;
+ 
+
     return 0;
 }

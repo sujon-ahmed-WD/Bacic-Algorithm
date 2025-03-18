@@ -1,2 +1,2 @@
-      cout << i << endl;
-            exit(0);
+            min = a[i];
+            min_index = i;
