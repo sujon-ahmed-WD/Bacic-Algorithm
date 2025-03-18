@@ -21,8 +21,7 @@ int main()
             min_index = i;
         }
     }
-    cout << min << " " << min_index+1;
- 
+    cout << min << " " << min_index + 1;
 
     return 0;
 }
