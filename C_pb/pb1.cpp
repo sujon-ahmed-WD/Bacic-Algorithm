@@ -4,24 +4,14 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    long long n;
-    cin >> n;
-    long long a[n];
-    for (int i = 0; i < n; i++)
+    string a;
+    cin >> a;
+    int sum=0;
+    for (int i = 0; i < a.size(); i++)
     {
-        cin >> a[i];
+        a[i]=a[i]-'0'; // akna i aschi code 49 and 0 holo 48 now a[i]=49-48; amra a
+        sum+=a[i];
     }
-    int min = a[0];
-    int min_index = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (min > a[i])
-        {
-            min = a[i];
-            min_index = i;
-        }
-    }
-    cout << min << " " << min_index + 1;
-
-    return 0;
+    cout<<sum;
+        return 0;
 }
