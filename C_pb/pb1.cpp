@@ -15,3 +15,8 @@ int main()
     cout<<sum;
         return 0;
 }
+/*
+git add .
+git commit -m"morting"
+git push
+*/ 
